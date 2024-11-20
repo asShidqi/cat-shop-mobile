@@ -1,6 +1,8 @@
+import 'package:cat_shop_mobile/screens/list_catentry.dart';
 import 'package:flutter/material.dart';
 import 'package:cat_shop_mobile/screens/menu.dart';
 import 'package:cat_shop_mobile/screens/catentry_form.dart';
+
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
 
@@ -60,6 +62,17 @@ class LeftDrawer extends StatelessWidget {
                       builder: (context) => const CatEntryFormPage(),
                     ));
               },
+            ),
+            ListTile(
+                leading: const Icon(Icons.add_reaction_rounded),
+                title: const Text('Daftar Kucing'),
+                onTap: () {
+                    // Route menu ke halaman mood
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const CatEntryPage()),
+                    );
+                },
             ),
         ],
       ),
